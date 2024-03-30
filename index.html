@@ -1,120 +1,247 @@
 <!DOCTYPE html>
 <html>
-  <body style="                          background-color: black;"> <br>
-        <font color="#ffffff">
-          
+  <head>
+    <body style="                          background-color: black;"> <br>
+      <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="https://cdn.pixabay.com/photo/2013/07/13/09/38/sphere-155819_640.png"
+            type="image/x-icon" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script type="text/javascript">
+            function tb8_makeArray(n) {
+                this.length = n;
+                return this.length;
+            }
+            tb8_messages = new tb8_makeArray(3);
+            tb8_messages[0] = "WHERE IS IT...?";
+            tb8_messages[1] = "ASK AROUND..";
+            tb8_messages[2] = "GOSSIP.";
+            tb8_rptType = "infinite";
+            tb8_rptNbr = 5;
+            tb8_speed = 200;
+            tb8_delay = 2000;
+            var tb8_counter = 1;
+            var tb8_currMsg = 0;
+            var tb8_tekst = "";
+            var tb8_i = 0;
+            var tb8_TID = null;
+            function tb8_pisi() {
+                tb8_tekst =
+                    tb8_tekst +
+                    tb8_messages[tb8_currMsg].substring(tb8_i, tb8_i + 1);
+                document.title = tb8_tekst;
+                tb8_sp = tb8_speed;
+                tb8_i++;
+                if (tb8_i == tb8_messages[tb8_currMsg].length) {
+                    tb8_currMsg++;
+                    tb8_i = 0;
+                    tb8_tekst = "";
+                    tb8_sp = tb8_delay;
+                }
+                if (tb8_currMsg == tb8_messages.length) {
+                    if (tb8_rptType == "finite" && tb8_counter == tb8_rptNbr) {
+                        clearTimeout(tb8_TID);
+                        return;
+                    }
+                    tb8_counter++;
+                    tb8_currMsg = 0;
+                }
+                tb8_TID = setTimeout("tb8_pisi()", tb8_sp);
+            }
+            tb8_pisi();
+        </script>
+        <title>GOSSIP...?</title>
+
+  </head>
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+    <style>
+			
+      
+            :disabled, :disabled+label, input[readonly], input[readonly]+label {
+       color: black;
+      }
+      
+      input[type=email]:disabled, input[type=email]:read-only, input[type=number]:disabled, input[type=number]:read-only, input[type=password]:disabled, input[type=password]:read-only, input[type=text]:disabled, input[type=text]:read-only, textarea:disabled {
+        background-color: white;
+      }
+      
+      ul.tree-view a {
+       text-decoration: underline; 
+      }
+      
+      body
+      {
+        background-image: url("");
+        background-size: cover;
+        top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+            .field-row {
+       margin-bottom: 5px;
+        margin-top: 6px;
+        
+      }
+			            #mailwindow {
+                                  animation: fly 15s infinite alternate;
+              position: absolute;
+              z-index: 9;
+              background-color: #f1f1f1;
+              text-align: center;
+              border: 1px solid #d3d3d3;
+              cursor: move;
+            }
+      
+      
+
+
+
+        @keyframes fly {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(10px) translateY(-10px); }
+            100% { transform: translateX(0); }
+        }
+      
+      
+              @keyframes fly2 {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(10px) translateY(-10px); }
+            100% { transform: translateX(0); }
+        }
+      
+      
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .window {
+        width: 300px;
+      }
+    </style>
+    <script language="JavaScript">
+
+      
+function Scroll()
+{
+document.title = msg.substring(pos, msg.length) + space + msg.substring(0,pos);
+pos++;
+if (pos > msg.length) pos = 0;
+window.setTimeout("Scroll()", speed);
+}
+Scroll();
+</script> 
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+  </head>
+  <body>
+      
+    <div id="mailwindow">
+      <div class="container">
+        <div class="window">
+          <div class="title-bar">
+            <div class="title-bar-text"><span style="color: blue"><span style="color: black;"><img
+
+                    src="https://sydnia.neocities.org/mails/outlook.png" style="width: 10px; height: 10px;"></span></span>
+              Guest Book</div>
+            <div class="title-bar-controls"> <button aria-label="Minimize"></button>
+              <button aria-label="Maximize"></button> <button aria-label="Close"></button>
+            </div>
+          </div>
+          <table class="interactive" style="width: 299px;">
+            <thead>
+              <tr>
+                <th><u>F</u>ile<u><br>
+                  </u></th>
+                <th><u>Edit<br>
+                  </u></th>
+                <th>View</th>
+                <th>Window</th>
+                <th>Help</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+          <div class="field-row"><label for="text21">&nbsp; &nbsp; &nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; to:</label> <input id="text21"
+
+              disabled="disabled" value="you" type="text"> </div>
+          <div class="field-row">&nbsp;&nbsp;&nbsp; subject:<label for="text17"></label><input
+
+              id="text17" value="Got a sec?" type="text"></div>
+          <ul class="tree-view">
+        
     
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# blog: http://ogp.me/ns/blog#" profile="blog.flatsound.org/ssytatsol"><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport" />
-	<style type="text/css">figure {margin: 0;}
-	</style>
-	<link href="http://gentle.earth/gefavicon.ico" rel="icon" type="image/ico" />
-	<title></title>
-	<style type="text/css">/* unvisited link */
-a:link {
-    color:floralwhite;
-    text-decoration: none;
+            </li>
+     
+               <iframe src="https://www3.cbox.ws/box/?boxid=3536229&boxtag=LfK2NX" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>	
 
+            </li>
+
+              <br>
+            </li>
+              <br>
+              <a href="https://onthinice.github.io/home/"><b>go back?</b><br>
+                <br>
+              </a></li>
+          </ul>
+          <div class="status-bar">
+            <p class="status-bar-field">Press F1 for help</p>
+            <p class="status-bar-field">0 items </p>
+            <p class="status-bar-field">No new messages</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+//Make the DIV element draggagle:
+dragElement(document.getElementById("mailwindow"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
 }
-/* visited link */
-a:visited {
-    color:fl;
-}
-
-/* mouse over link */
-a:hover {
-    color: #ffffff
-    background-color:#ffffff;
-    text-decoration: none;
-
-}
-
-/* selected link */
-a:active {
-    color:indigo;
-}
-
-
-
-#header_top_margin {
-    margin-top: 70px;
-}
-
-
-
-h3 {
-    display: none;
-    font-size: 1.17em;
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    font-weight: bold;
-}
-
-
-    div#line1 span#a {
-        display:inline;
-    }
-    div#line1:hover span#a {
-        display:none;
-    }
-    div#line1 span#b {
-        display:none;
-    }
-    div#line1:hover span#b {
-        display:inline;
-    }
-
- 
-
-		
-p {text-align:center;font-family:Helvetica;font-size:11px !important;font-style:normal;font-weight:normal;color:floralwhite;}
-	
-
-@media screen and (max-width:959px) {
-          #container{
-                width:100%;
-}
-       
-
-}
-	</style>
-	<script type="text/javascript">
-document.write('<div align="center">');
-var sc_project=11737384; 
-var sc_invisible=1; 
-var sc_security="d694aac0"; 
-</script><script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script><script>document.write('</div>');</script>
-</head>
-<body>
-<div style="text-align: center;">
-<div id="line1">
-<table align="center" border="0">
-	<tbody>
-		<tr>
-			<td>
-			<div id="header_top_margin"><span style="font-size:12px;"><span style="font-family:georgia,serif;"><span id="a">G U E S T . B O O K</span> <span id="b">| j u s t &nbsp; s i g n |</span></span></span></div>
-			</td>
-		</tr>
-	</tbody>
-</table>
-</div>
-    <iframe src="https://www3.cbox.ws/box/?boxid=3536229&boxtag=LfK2NX" width="50%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>	
-
-<div><br />
-<br />
-
-<div id="container"><!-- customize labels of htmlcommentbox.com --><script>
-</script><!-- done customizing labels of htmlcommentbox.com --><!-- begin htmlcommentbox.com -->
-<div id="container">
-<p style="font-family: arial, helvetica, sans-serif; font-size: 11px;"><br />
-<br />
-<br />
-<a href="https://onthinice.github.io/home/">home</a> | <a href="">about</a> | <a href="">submit</a>&nbsp;| <a href="">instagram</a><br />
-<br />
-<br />
-<br />
-&nbsp;</p>
-</div>
-<body>
-<html>
+</script> </body>
+</html>
